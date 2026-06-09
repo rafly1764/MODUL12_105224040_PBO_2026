@@ -1,0 +1,27 @@
+public class KeretaApi {
+    private String kodeKereta;
+    private String namaKereta;
+    private String rute;
+    private int sisaKursi;
+    public KeretaApi(String kodeKereta, String namaKereta, String rute, int sisaKursi) {
+        this.kodeKereta = kodeKereta;
+        this.namaKereta = namaKereta;
+        this.rute = rute;
+        this.sisaKursi = sisaKursi;
+    }
+    public String getNamaKereta() {
+        return namaKereta;
+    }
+    public String getRute() {
+        return rute;
+    }
+    public int getSisaKursi() {
+        return sisaKursi;
+    }
+    public void kurangiKursi(int jumlah) {
+        sisaKursi = sisaKursi - jumlah;
+    }
+    public void tampilkanInfo() {
+        System.out.println(kodeKereta + " - " + namaKereta + " - " + rute + " - Sisa kursi: " + sisaKursi);
+    }
+}
